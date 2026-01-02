@@ -1,9 +1,10 @@
+
 import os
 import pandas as pd
 from datetime import datetime
 
-RAW_PATH = "/data/raw"
-PROCESSED_PATH = "/data/processed"
+RAW_PATH = "data/raw"
+PROCESSED_PATH = "data/processed"
 OUTPUT_FILE = "Column-RowCount-duplicate.csv"
 
 results = []
@@ -62,3 +63,5 @@ output_path = os.path.join(PROCESSED_PATH, OUTPUT_FILE)
 results_df.to_csv(output_path, index=False)
 
 print(f"EDA summary exported to: {output_path}")
+
+
