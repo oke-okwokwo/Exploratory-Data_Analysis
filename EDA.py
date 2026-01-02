@@ -3,6 +3,9 @@ import os
 import pandas as pd
 from datetime import datetime
 
+print("The script is currently running, please wait...")
+
+
 RAW_PATH = "data/raw"
 PROCESSED_PATH = "data/processed"
 OUTPUT_FILE = "Column-RowCount-duplicate.csv"
@@ -20,7 +23,8 @@ for file_name in os.listdir(RAW_PATH):
     table_name = os.path.splitext(file_name)[0]
 
     # Read CSV
-    df = pd.read_csv(file_path)
+    df = pd.read_csv(file_path, dtype=str, low_memory=False)
+
 
     row_count = len(df)
     column_count = len(df.columns)
