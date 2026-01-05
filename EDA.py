@@ -1,7 +1,15 @@
 
 import os
+import platform
 import pandas as pd
 from datetime import datetime
+
+# Ensure the screen is cleared before running the script
+if platform.system() == "Windows":
+    os.system("cls")
+else:
+    os.system("clear")
+
 
 print("The script is currently running, please wait...")
 
