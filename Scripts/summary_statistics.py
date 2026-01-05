@@ -3,6 +3,8 @@ from datetime import datetime
 import pandas as pd
 import numpy as np
 
+print("The script is currently running, please wait...")
+
 RAW_PATH = "./data/raw"
 PROCESSED_PATH = "./data/processed"
 OUTPUT_FILE = "Summary_Statistics.csv"
@@ -32,7 +34,7 @@ def calculate_summary_statistics(raw_path: str = RAW_PATH) -> pd.DataFrame:
         file_path = os.path.join(raw_path, file_name)
         table_name = os.path.splitext(file_name)[0]
 
-        df = pd.read_csv(file_path)
+        df = pd.read_csv(file_path, low_memory=False)
 
         # Identify numeric columns
         numeric_cols = df.select_dtypes(include=[np.number]).columns.tolist()
