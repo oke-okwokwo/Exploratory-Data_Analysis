@@ -55,9 +55,9 @@ def calculate_summary_statistics(raw_path: str = RAW_PATH) -> pd.DataFrame:
         for col in numeric_cols:
             col_data = df[col].dropna()
 
-            mean = col_data.mean()
-            std = col_data.std()
-            variation_coeff = std / mean if mean != 0 else np.nan
+            mean = round(col_data.mean(),2)
+            std = round(col_data.std(),2)
+            variation_coeff = round((std / mean)*100 if mean != 0 else np.nan)
 
             results.append({
                 "Table Name": table_name,
