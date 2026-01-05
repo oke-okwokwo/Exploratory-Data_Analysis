@@ -14,8 +14,8 @@ else:
 print("The script is currently running, please wait...")
 
 
-RAW_PATH = "data/raw"
-PROCESSED_PATH = "data/processed"
+RAW_PATH = "./data/raw"
+PROCESSED_PATH = "./data/processed"
 OUTPUT_FILE = "Column-RowCount-duplicate.csv"
 
 results = []
