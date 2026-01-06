@@ -86,4 +86,14 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main()  # Run the summary statistics
+
+    # Automatically run tests after the main script
+    try:
+        import pytest
+        print("\nRunning tests...\n")
+        # Run all tests in the ./tests folder
+        pytest_args = ["-q", "--tb=short", "./tests"]
+        pytest.main(pytest_args)
+    except ImportError:
+        print("pytest not installed. Skipping tests.")
