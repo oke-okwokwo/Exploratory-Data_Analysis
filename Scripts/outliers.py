@@ -106,11 +106,15 @@ def main():
     print(f"Outlier detection complete → {output_path}")
 
 
-def run_tests():
-    print("Running pytest...")
-    subprocess.run(["pytest", "./tests/test_outliers.py"], check=False)
-
-
 if __name__ == "__main__":
-    main()
-#    run_tests()
+    main()  # Run the summary statistics
+
+  # Automatically run tests after the main script
+    try:
+        import pytest
+        print("\nRunning tests...\n")
+        # Run all tests in the ./tests folder
+        pytest_args = ["-q", "--tb=short", "./tests"]
+        pytest.main(pytest_args)
+    except ImportError:
+        print("pytest not installed. Skipping tests.")
