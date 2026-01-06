@@ -1,7 +1,14 @@
 import os
+import platform
 from datetime import datetime
 import pandas as pd
 import numpy as np
+
+# Ensure the screen is cleared before running the script
+if platform.system() == "Windows":
+    os.system("cls")
+else:
+    os.system("clear")
 
 print("The script is currently running, please wait...")
 
@@ -9,7 +16,7 @@ RAW_PATH = "./data/raw"
 PROCESSED_PATH = "./data/processed"
 OUTPUT_FILE = "Summary_Statistics.csv"
 
-
+  
 def is_id_column(series: pd.Series, column_name: str) -> bool:
     """
     Determine whether a numeric column should be treated as an ID.
@@ -55,9 +62,9 @@ def calculate_summary_statistics(raw_path: str = RAW_PATH) -> pd.DataFrame:
         for col in numeric_cols:
             col_data = df[col].dropna()
 
-            mean = round(col_data.mean(),2)
-            std = round(col_data.std(),2)
-            variation_coeff = round((std / mean)*100 if mean != 0 else np.nan)
+            mean = round(col_data.mean(),1)
+            std = round(col_data.std(),1)
+            variation_coeff = round((std / mean)*100 if mean != 0 else np.nan,1)
 
             results.append({
                 "Table Name": table_name,
@@ -88,7 +95,7 @@ def main():
 if __name__ == "__main__":
     main()  # Run the summary statistics
 
-    # Automatically run tests after the main script
+  # Automatically run tests after the main script
     try:
         import pytest
         print("\nRunning tests...\n")
