@@ -107,7 +107,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()  # Run the summary statistics
+    main()  # Run the outlier script
 
   # Automatically run tests after the main script
     try:
