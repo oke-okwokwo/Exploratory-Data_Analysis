@@ -28,7 +28,7 @@ def is_id_column(series: pd.Series, column_name: str) -> bool:
 
     uniqueness_flag = series.nunique(dropna=True) == len(series)
 
-    return name_flag or uniqueness_flag
+    return name_flag and uniqueness_flag
 
 
 def calculate_summary_statistics(raw_path: str = RAW_PATH) -> pd.DataFrame:
