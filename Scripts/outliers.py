@@ -44,8 +44,8 @@ def detect_outliers(series: pd.Series) -> list:
     q3 = series.quantile(0.75)
     iqr = q3 - q1
 
-    lower = q1 - 3.0 * iqr
-    upper = q3 + 3.0 * iqr
+    lower = q1 - 1.5 * iqr
+    upper = q3 + 1.5 * iqr
 
     return series[(series < lower) | (series > upper)].tolist()
 

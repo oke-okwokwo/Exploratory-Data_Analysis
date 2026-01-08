@@ -1,5 +1,5 @@
 import pandas as pd
-from outliers import is_id_column, detect_outliers
+from Scripts.outliers import is_id_column, detect_outliers
 
 
 def test_is_id_column_by_name():
