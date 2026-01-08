@@ -44,8 +44,8 @@ def detect_outliers(series: pd.Series) -> list:
     q3 = series.quantile(0.75)
     iqr = q3 - q1
 
-    lower = q1 - 1.5 * iqr
-    upper = q3 + 1.5 * iqr
+    lower = q1 - 3.0 * iqr
+    upper = q3 + 3.0 * iqr
 
     return series[(series < lower) | (series > upper)].tolist()
 
@@ -114,7 +114,7 @@ if __name__ == "__main__":
         import pytest
         print("\nRunning tests...\n")
         # Run all tests in the ./tests folder
-        pytest_args = ["-q", "--tb=short", "./tests"]
+        pytest_args = ["-q", "--tb=short", "./tests/test_outliers.py"]
         pytest.main(pytest_args)
     except ImportError:
         print("pytest not installed. Skipping tests.")

@@ -100,7 +100,7 @@ if __name__ == "__main__":
         import pytest
         print("\nRunning tests...\n")
         # Run all tests in the ./tests folder
-        pytest_args = ["-q", "--tb=short", "./tests"]
+        pytest_args = ["-q", "--tb=short", "./tests/test_summary_statistics.py"]
         pytest.main(pytest_args)
     except ImportError:
         print("pytest not installed. Skipping tests.")

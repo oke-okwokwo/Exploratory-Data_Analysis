@@ -1,6 +1,13 @@
+import sys
+from pathlib import Path
+
+# Add project root to PYTHONPATH
+ROOT_DIR = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT_DIR))
+
 import pandas as pd
 import numpy as np
-from summary_statistics import calculate_summary_statistics
+from Scripts.summary_statistics import calculate_summary_statistics
 
 
 def test_summary_statistics_basic(tmp_path):
