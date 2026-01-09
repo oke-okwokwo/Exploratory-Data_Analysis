@@ -1,14 +1,22 @@
 # summary_statistics_1.py
 
 from __future__ import annotations
-
+import os
 from pathlib import Path
 from datetime import datetime, timezone
 from typing import List, Optional
 
 import numpy as np
 import pandas as pd
+import platform
 
+# Ensure the screen is cleared before running the script
+if platform.system() == "Windows":
+    os.system("cls")
+else:
+    os.system("clear")
+
+print("The script is currently running, please wait...") 
 
 RAW_PATH = Path("./data/raw")
 PROCESSED_PATH = Path("./data/processed")
@@ -173,7 +181,7 @@ if __name__ == "__main__":
         import pytest
         print("\nRunning tests...\n")
         # Run all tests in the ./tests folder
-        pytest_args = ["-q", "--tb=short", "./tests/test_summary_statistics.py"]
+        pytest_args = ["-q", "--tb=short", "./tests/test_summary_statistics_1.py"]
         pytest.main(pytest_args)
     except ImportError:
         print("pytest not installed. Skipping tests.")
