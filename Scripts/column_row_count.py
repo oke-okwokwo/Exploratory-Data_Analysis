@@ -130,7 +130,7 @@ def analyze_tables(
         [
             {
                 "Table Name": r.table_name,
-                "Unique Coumn(s)": r.unique_columns,  # spelled as requested
+                "Unique Column(s)": r.unique_columns,  # spelled as requested
                 "Column Count": r.column_count,
                 "Row count": r.row_count,
                 "Unique rows count": r.unique_rows_count,
@@ -142,7 +142,7 @@ def analyze_tables(
         ],
         columns=[
             "Table Name",
-            "Unique Coumn(s)",
+            "Unique Column(s)",
             "Column Count",
             "Row count",
             "Unique rows count",

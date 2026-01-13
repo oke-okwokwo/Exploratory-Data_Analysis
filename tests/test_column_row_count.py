@@ -56,7 +56,7 @@ def test_analyze_tables_counts_and_duplicates(tmp_path):
     assert row1["Unique rows count"] == 2
     assert row1["Null count"] == 1
     # Unique column(s): id is not unique; value is not unique; expect "None"
-    assert row1["Unique Coumn(s)"] == "None"
+    assert row1["Unique Column(s)"] == "None"
     # Date updated should look like ISO Zulu format
     assert row1["Date updated"].endswith("Z")
 
@@ -68,7 +68,7 @@ def test_analyze_tables_counts_and_duplicates(tmp_path):
     assert row2["Unique rows count"] == 3
     assert row2["Null count"] == 0
     # pk should be unique (no nulls, all distinct)
-    assert "pk" in row2["Unique Coumn(s)"]
+    assert "pk" in row2["Unique Column(s)"]
     assert row2["Date updated"].endswith("Z")
 
 
