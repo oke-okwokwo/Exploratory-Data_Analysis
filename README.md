@@ -22,7 +22,7 @@ By understanding these analysis, the project inproves consistency, reproducibili
 
 A **virtual environment** allows you to create isolated Python environments for different projects. This helps avoid dependency conflicts and keeps your workspace clean.
 
----
+
 
 ### Prerequisites
 
@@ -50,7 +50,7 @@ You can replace venv with any name:
 ```bash 
 python -m venv venv
 ```
-### 2. Activate the Virtual Environment
+### Activate the Virtual Environment
 Windows (PowerShell or CMD)
 ```bash
 venv\Scripts\activate
