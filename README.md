@@ -67,7 +67,7 @@ When activated, your terminal prompt will show the environment name, e.g.:
 ### Install Packages Inside the Environment
 Once activated, use pip normally to install the libraries in the requirements.txt file:
 ```bash
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 ### Deactivate the Environment
 To exit the virtual environment:
@@ -78,7 +78,7 @@ deactivate
 
 ## How to run the Python Scripts:
     -Open the project folder using an IDE (VScode, Pycharm or any Python IDE)
-    -The .csv files should be placed in the raw folder within the Scripts folder (./Scripts/raw).
+    -The .csv files containing the data to be analysed should be placed in the raw folder within the Scripts folder (./Scripts/raw).
     -Run the particular module inside the scripts folder.
     -The results will be exported to ./Scripts/processed.
     -The tests will run automatically when the each script finishes running.
