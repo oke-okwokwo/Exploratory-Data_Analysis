@@ -12,7 +12,7 @@ else:
 
 print("The script is currently running, please wait...")
 
-RAW_PATH = "./data/raw"
+RAW_PATH = "./data/athena_exports"
 PROCESSED_PATH = "./data/processed"
 OUTPUT_FILE = "Summary_Statistics.csv"
 
