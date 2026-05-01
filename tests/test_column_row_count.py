@@ -15,7 +15,7 @@ from Scripts.column_row_count import analyze_tables
 
 
 def test_analyze_tables_counts_and_duplicates(tmp_path):
-    raw_dir = tmp_path / "data" / "raw"
+    raw_dir = tmp_path / "data" / "athena_exports"
     processed_dir = tmp_path / "data" / "processed"
     raw_dir.mkdir(parents=True)
     processed_dir.mkdir(parents=True)
