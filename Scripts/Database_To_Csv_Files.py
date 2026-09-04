@@ -19,7 +19,7 @@ SESSION_PROFILE = "default"
 REGION = "eu-west-2"
 DATABASE_NAME = "feesextract"
 # DATABASE_NAME = "iabsextract"
-OUTPUT_LOCATION = "s3://dsa-cdl-s3-athena-notprod/"
+OUTPUT_LOCATION = "s3://dsa-cdl-s3-athena-prod/"
 LOCAL_OUTPUT_DIR = "./athena_exports"
 
 # ------------------------------------------------------------------
